@@ -1,20 +1,20 @@
 import React from 'react'
-import { useSession, signIn, signOut }from 'next-auth/react'
+import { useSession, signIn, signOut } from 'next-auth/react'
 
-function login() {
+const login = () => {
     const { data: session } = useSession();
  
     if (session) {
         return (
             <div>
-                <h2>Welcome, {session.user.email}</h2>
+                <p>Welcome, {session.user.email}</p>
                 <button onClick={() => signOut()}>Sign out</button>
             </div>
           )
     } else {
         return (
             <div>
-                <h2>You aint signed in buddy</h2>
+                <p>You aint signed in buddy</p>
                 <button onClick={() => signIn()}>Sign in</button>
             </div>
           )
