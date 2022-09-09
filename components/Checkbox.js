@@ -7,7 +7,7 @@ function Checkbox(props) {
         type="checkbox"
         name={props.title}
         className="w-5 h-5 border-gray-300 rounded"
-        onChange={props.handleOnChange}
+        onChange={() => props.handleOnChange(index)}
         
         />
 

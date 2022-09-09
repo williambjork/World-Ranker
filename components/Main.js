@@ -1,18 +1,24 @@
 import { useState } from "react"
 import Checkbox from "./Checkbox"
+import { toppings } from "../utils/toppings";
 
 
 
 
 function Main() {
 
-    const handleOnChange = () => {
-        setIsChecked(!isChecked);
+    const handleOnChange = (position) => {
+        const updatedCheckedState = isChecked.map((item, index) => 
+        index === position ? !item : item)
+
+        setIsChecked(updatedCheckedState);
     }
     
 
     const [price, setPrice] = useState();
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState(
+        new Array(toppings.length).fill(false)
+    );
 
 
   return (
