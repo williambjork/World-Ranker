@@ -1,9 +1,14 @@
 import { useState } from "react"
 import Checkbox from "./Checkbox"
 
-const [price, setPrice] = useState(0);
+function handleCheckbox() {
+    console.log("click")
+}
 
 function Main() {
+
+    const [price, setPrice] = useState();
+
   return (
     <a class="relative block p-8 border border-gray-100 shadow-xl rounded-xl" href="">
  
@@ -18,10 +23,10 @@ function Main() {
       Your pizza is: {price}
     </p>
 
-    <Checkbox title="Pepperoni"/>
-    <Checkbox title="Cheese"/>
-    <Checkbox title="Bacon"/>
-    <Checkbox title="Kebab"/>
+    <Checkbox title="Pepperoni" cost={1} handleCheckbox={handleCheckbox}/>
+    <Checkbox title="Cheese" cost={3}/>
+    <Checkbox title="Bacon" cost={7}/>
+    <Checkbox title="Kebab" cost={10}/>
   </div>
 </a>
 
