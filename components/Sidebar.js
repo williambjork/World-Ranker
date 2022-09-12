@@ -18,16 +18,7 @@ function Sidebar() {
         <SidebarButton icon={<BookmarkIcon />} title="Library"/>
         <SidebarButton icon={<CloudIcon />} title="Cloud Gaming"/> 
         <SidebarButton icon={<UserIcon />} title="Community"/>
-        <SidebarButton icon={<CakeIcon />} title="Store"/>
-
-        
-        <div className="hover:bg-gray-700 px-4 py-2 rounded">
-            <button className="flex items-center space-x-2 ">
-                <CakeIcon />
-                <h3>Store</h3>
-            </button>
-            </div>
-         
+        <SidebarButton icon={<CakeIcon />} title="Store"/>         
 
             <button className="flex items-center space-x-2 ">
             <p>Installerad</p>
