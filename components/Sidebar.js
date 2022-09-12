@@ -5,6 +5,7 @@ import { UserIcon } from '@heroicons/react/24/solid'
 import { CakeIcon } from '@heroicons/react/24/solid'
 
 import SidebarButton from "./SidebarButton"
+import User from "./User"
 
 function Sidebar() {
   return (
@@ -12,6 +13,8 @@ function Sidebar() {
                     text-xs lg:text-sm text-white scrollbar-hide
                     sm:max-w-[15rem] lg:max-w-[18rem]  pb-36 left-3 bg-black">
         <div className="">
+
+        <User />
 
         
         <SidebarButton icon={<HomeIcon />} title="Game Pass"/>
