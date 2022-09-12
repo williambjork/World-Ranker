@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Main from "../Components/Main"
 import Checkbox from "../Components/Checkbox"
 import ResetButton from "../Components/ResetButton"
+import Sidebar from "../components/Sidebar"
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,8 @@ const Home: NextPage = () => {
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <Main />
+        
+        <Sidebar />
       </main>
 
       <footer className="flex h-24 w-full items-center justify-center border-t">
