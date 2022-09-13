@@ -25,9 +25,9 @@ function Sidebar() {
         <SidebarButton icon={<UserIcon className="w-6 h-6" />} title="Community"/>
         <SidebarButton icon={<CakeIcon className="w-6 h-6"/>} title="Store"/>         
 
-            <button className="flex items-center space-x-3  text-gray-400 pl-2 pt-9">
+            <div className="flex items-center space-x-3  text-gray-400 pl-2 pt-9">
             <p>Installerad</p>
-            </button>
+            </div>
         </div>
     </div>
   )
