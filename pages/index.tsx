@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import Main from "../Components/Main"
+import Main from "../components/Main"
 import Checkbox from "../Components/Checkbox"
 import ResetButton from "../Components/ResetButton"
 import Sidebar from "../components/Sidebar"
+
 
 const Home: NextPage = () => {
   return (
@@ -14,10 +15,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="">
-      {/*  <Main /> */}
+      <main className=" flex">
+        
+      <Sidebar />
 
-        <Sidebar />
+      
+        
+      <Main /> 
+
+        
       </main>
 
    
