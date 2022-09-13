@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Header from "../components/Header"
 import Carousel from "../components/Carousel"
 import Card from "../components/Card"
+import { fetchGames } from "../utils/requests"
 
 
 const Home: NextPage = () => {
@@ -13,24 +14,17 @@ const Home: NextPage = () => {
 
   function fetchGames() {
 
-    
-    
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '248a69af1dmsh2bd4ec49697497ap14fbeejsn8814fc4068ee',
-        'X-RapidAPI-Host': 'rawg-video-games-database.p.rapidapi.com',
-        'platforms': 4
-      }
-    };
-    
-    fetch('https://rawg-video-games-database.p.rapidapi.com/games?key=f6d4a95732b6497e929238e5994121e6', options)
-      .then(response => response.json())
+    fetch('https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2019-09-01,2019-09-30&platforms=18,1,7')
+    .then(response => response.json())
       .then(response => setGames(response))
       .catch(err => console.error(err));
     
-      
-  }
+    }
+  
+
+  
+  console.log(games)
+
 
   return (
     <div className="">
@@ -49,8 +43,7 @@ const Home: NextPage = () => {
       <Header />
       
       <Card  maintitle="Card one" subtitle="wow" />
-      <Card maintitle="Card two" subtitle="ok" />
-      <Card maintitle="Card three" subtitle="cool" />
+     
       </div>
         
       
