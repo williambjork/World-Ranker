@@ -37,15 +37,33 @@ const Home: NextPage = () => {
       
       
       <Sidebar />
+      
 
       <div className="bgmesh h-screen w-screen overflow-hidden">
-      
-      <Header />
-      
-      <Card  maintitle="Card one" subtitle="wow" />
-     
-      </div>
+        <Header />
+
+        <div className="">
+          <h2>Cool Games</h2>
+        </div>
+        <div className="flex m-3 gap-3">
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
         
+        </div>
+      
+      
+      </div>
+
+      
+      
+      
+     
+      
+      
       
 
       
