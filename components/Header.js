@@ -1,5 +1,4 @@
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
-import { HomeIcon } from "@heroicons/react/24/solid";
 
 function Header() {
   return (
@@ -24,7 +23,7 @@ function Header() {
           placeholder="Search"
         />
 
-          <span class="absolute text-gray-400 pointer-events-none -translate-y-1/2 top-1/2 right-4">
+          <span class="absolute text-gray-400 pointer-events-none  top-1/2 right-4">
             <svg
               class="w-5 h-5"
               xmlns="http://www.w3.org/2000/svg"
