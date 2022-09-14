@@ -17,13 +17,13 @@ const Home: NextPage = () => {
     .then(response => response.json())
       .then((response) => setGames(Object.entries(response)))
       .catch(err => console.error(err));
-       
+      console.log((games[3][1][0]["slug"]))
     } 
 
    
   
     
-    console.log(Object.entries(games))
+    
     
   
 
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
         <div className="inline-flex m-3 gap-3 shrink-0 flex-wrap justify-center">
         
        {games.map((game) => {
-          return <Card  maintitle="Card one" subtitle="wow" />
+          return <Card  maintitle={games[3][1][0]["slug"]} subtitle="wow" />
         })} 
         
       
