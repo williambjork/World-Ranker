@@ -42,10 +42,10 @@ const Home: NextPage = () => {
       <div className="bgmesh h-screen w-screen overflow-hidden">
         <Header />
 
-        <div className="">
-          <h2>Cool Games</h2>
+        <div className="flex justify-center text-3xl text-white pt-9 pb-2">
+          <h2>Upcoming Games</h2>
         </div>
-        <div className="flex m-3 gap-3">
+        <div className="flex m-3 gap-3 shrink-0">
         <Card  maintitle="Card one" subtitle="wow" />
         <Card  maintitle="Card one" subtitle="wow" />
         <Card  maintitle="Card one" subtitle="wow" />
