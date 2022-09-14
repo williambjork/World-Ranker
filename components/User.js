@@ -18,7 +18,7 @@ function User() {
             
       
 
-        <BellIcon className="w-7 h-7 mt-4 hover:bg-gray-700 rounded" />
+        {/* <BellIcon className="w-7 h-7 mt-4 hover:bg-gray-700 rounded" /> */}
 
         </div>
         
