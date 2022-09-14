@@ -45,7 +45,16 @@ const Home: NextPage = () => {
         <div className="flex justify-center text-3xl text-white pt-9 pb-2">
           <h2>Upcoming Games</h2>
         </div>
-        <div className="flex m-3 gap-3 shrink-0">
+        <div className="inline-flex m-3 gap-3 shrink-0 flex-wrap justify-center">
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
+        <Card  maintitle="Card one" subtitle="wow" />
         <Card  maintitle="Card one" subtitle="wow" />
         <Card  maintitle="Card one" subtitle="wow" />
         <Card  maintitle="Card one" subtitle="wow" />
