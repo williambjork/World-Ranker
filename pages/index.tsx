@@ -9,20 +9,22 @@ import Card from "../components/Card"
 
 const Home: NextPage = () => {
 
-  const [games, setGames] = useState({})
+  const [games, setGames] = useState([])
 
-  function fetchGames() {
+   function fetchGames()  {
 
-    fetch(`https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2019-09-01,2019-09-30&platforms=18,1,7`)
+   fetch(`https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2019-09-01,2019-09-30&platforms=18,1,7`)
     .then(response => response.json())
-      .then(response => setGames(response))
+      .then((response) => setGames(Object.entries(response)))
       .catch(err => console.error(err));
-      console.log(games)
-    }
-  
-  
-  
+       
+    } 
 
+   
+  
+    
+    console.log(Object.entries(games))
+    
   
 
   return (
@@ -46,30 +48,12 @@ const Home: NextPage = () => {
           <h2>Upcoming Games</h2>
         </div>
         <div className="inline-flex m-3 gap-3 shrink-0 flex-wrap justify-center">
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
-        <Card  maintitle="Card one" subtitle="wow" />
         
+       {games.map((game) => {
+          return <Card  maintitle="Card one" subtitle="wow" />
+        })} 
+        
+      
         </div>
       
       
