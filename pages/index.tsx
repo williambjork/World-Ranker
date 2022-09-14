@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Sidebar from "../components/Sidebar"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from "../components/Header"
 import Carousel from "../components/Carousel"
 import Card from "../components/Card"
@@ -17,13 +17,13 @@ const Home: NextPage = () => {
     .then(response => response.json())
       .then(response => setGames(response))
       .catch(err => console.error(err));
-    
+      console.log(games)
     }
   
+  
+  
 
   
-  console.log(games)
-
 
   return (
     <div className="">
@@ -40,6 +40,7 @@ const Home: NextPage = () => {
 
       <div className="bgmesh h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
         <Header />
+        <button onClick={fetchGames}>Fetch</button>
 
         <div className="flex justify-center text-3xl text-white pt-9 pb-2">
           <h2>Upcoming Games</h2>
