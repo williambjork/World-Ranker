@@ -11,21 +11,25 @@ const Home: NextPage = () => {
 
   const [games, setGames] = useState([])
 
-   function fetchGames()  {
+   async function fetchGames()  {
 
-   fetch(`https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2015-09-01,2019-09-30&platforms=18,1,7`)
+   /* fetch(`https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2015-09-01,2019-09-30&platforms=18,1,7`)
     .then(response => response.json())
       .then((response) => setGames(Object.entries(response)))
       .catch(err => console.error(err));
       console.log(games)
-    } 
+    }  */
+  
+    const url = "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2015-09-01,2019-09-30&platforms=18,1,7";
+    const response = await fetch(url);
+    const data = await response.json();
+    setGames(data.results)
+    console.log(games)
+  
+  
+  }
 
    
-  
-    
-    
-    
-  
 
   return (
     <div>
@@ -49,9 +53,10 @@ const Home: NextPage = () => {
         </div>
         <div className="inline-flex m-3 gap-3 shrink-0 flex-wrap justify-center">
         
-       {games.map((game) => {
-          return <Card metacritic={games[3][1][2]["metacritic"]}  maintitle={games[3][1][2]["name"]} subtitle={games[3][1][0]["released"] } />
-        })} 
+          {games.map((game) => 
+        <Card metacritic={game.metacritic}  maintitle={game.name} subtitle={game.released} /> 
+        )} 
+        
         
       
         </div>

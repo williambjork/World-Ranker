@@ -10,7 +10,7 @@ function User() {
         
         <div className="justify-content ">
             
-            <p className=" px-4 py-2 hocer:cursor-pointer">Delicious Donut  </p>
+            <p className=" px-4 py-2 hocer:cursor-pointer">William Björk </p>
            {/*} <p className="pl-4 bg-white text-black text-xs">PC GAMES</p> */}
         </div>
         
