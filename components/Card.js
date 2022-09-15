@@ -1,4 +1,19 @@
+import { useEffect, useState } from "react";
+
 function Card({maintitle, subtitle, metacritic}) {
+
+  const [metaColor, setMetaColor] = useState(null)
+
+  useEffect(() => {
+    if(metacritic >= 85) {
+      setMetaColor("green-400")
+    } else {
+      setMetaColor("white")
+    }
+  }, [metacritic]);
+
+  console.log(metaColor)
+
   return (
     <div>
       <a
@@ -6,7 +21,7 @@ function Card({maintitle, subtitle, metacritic}) {
         className="relative block overflow-hidden bg-center bg-no-repeat bg-cover  rounded-xl"
         
       >
-        <span className="absolute z-10 inline-flex items-center px-3 py-1 text-xs font-semibold text-white bg-black rounded-full  right-4 top-4">
+        <span className={`absolute z-10 inline-flex items-center px-3 py-1 text-xs font-semibold text-${metaColor} bg-black rounded-full  right-4 top-4`}>
           {metacritic}
           <svg
             xmlns="http://www.w3.org/2000/svg"
