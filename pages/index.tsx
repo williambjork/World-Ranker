@@ -50,7 +50,7 @@ const Home: NextPage = () => {
         <div className="inline-flex m-3 gap-3 shrink-0 flex-wrap justify-center">
         
        {games.map((game) => {
-          return <Card metacritic={games[3][1][0]["metacritic"]}  maintitle={games[3][1][6]["name"]} subtitle={games[3][1][0]["released"] } />
+          return <Card metacritic={games[3][1][2]["metacritic"]}  maintitle={games[3][1][2]["name"]} subtitle={games[3][1][0]["released"] } />
         })} 
         
       
