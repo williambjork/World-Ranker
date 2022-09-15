@@ -1,4 +1,4 @@
-function Card({maintitle, subtitle}) {
+function Card({maintitle, subtitle, metacritic}) {
   return (
     <div>
       <a
@@ -7,7 +7,7 @@ function Card({maintitle, subtitle}) {
         
       >
         <span className="absolute z-10 inline-flex items-center px-3 py-1 text-xs font-semibold text-white bg-black rounded-full  right-4 top-4">
-          4.5
+          {metacritic}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-4 w-4 ml-1.5 text-yellow-300"
