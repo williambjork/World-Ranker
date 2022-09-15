@@ -12,7 +12,7 @@ function Card({maintitle, subtitle, metacritic}) {
     }
   }, [metacritic]);
 
-  console.log(metaColor)
+  
 
   return (
     <div>
