@@ -18,10 +18,10 @@ function Card({maintitle, subtitle, metacritic}) {
     <div>
       <a
         href=""
-        className="relative block overflow-hidden bg-center bg-no-repeat bg-cover  rounded-xl"
+        className="  relative block overflow-hidden bg-center bg-no-repeat bg-cover  rounded-xl"
         
       >
-        <span className={`absolute z-10 inline-flex items-center px-3 py-1 text-xs font-semibold text-${metaColor} bg-black rounded-full  right-4 top-4`}>
+        <span className={`absolute z-10 inline-flex items-center px-3 py-1 text-xs font-semibold text-white bg-black rounded-full  right-4 top-4`}>
           {metacritic}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,9 +34,9 @@ function Card({maintitle, subtitle, metacritic}) {
         </span>
 
         <div className="relative p-8 pt-40 text-white bg-black bg-opacity-40">
-          <h5 className="text-2xl font-bold">{maintitle}</h5>
+          <h5 className="text-xl font-bold truncate">{maintitle}</h5>
 
-          <p className="text-sm">{subtitle}</p>
+          <p className="text-sm truncate">{subtitle}</p>
         </div>
       </a>
     </div>
