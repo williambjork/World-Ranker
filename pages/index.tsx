@@ -11,6 +11,7 @@ import Image from "next/image"
 const Home: NextPage = () => {
 
   const [games, setGames] = useState([])
+  
 
    async function fetchGames()  {
 
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
   
   }
 
+  
 
   return (
     <div>
@@ -54,6 +56,7 @@ const Home: NextPage = () => {
           </div>
           )} 
         
+        <a>Next</a>
         
       
         </div>
