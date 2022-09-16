@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import Header from "../components/Header"
 import Carousel from "../components/Carousel"
 import Card from "../components/Card"
+import Image from "next/image"
 
 
 const Home: NextPage = () => {
@@ -47,8 +48,11 @@ const Home: NextPage = () => {
         <div className="inline-flex m-3 gap-3 shrink-0 flex-wrap justify-center">
         
           {games.map((game) => 
-        <Card metacritic={game.metacritic} key={game.id}  maintitle={game.name} subtitle={game.released} /> 
-        )} 
+          <div>
+           <Card metacritic={game.metacritic} key={game.id}  maintitle={game.name} subtitle={game.released} /> 
+           <Image layout="responsive" src={game?.background_image} height={1080} width={1920}/>
+          </div>
+          )} 
         
         
       
