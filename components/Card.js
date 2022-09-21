@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Thumbnail from "./Thumbnail"
+import { motion } from "framer-motion"
 
 function Card({maintitle, subtitle, metacritic, image}) {
 
@@ -16,7 +17,10 @@ function Card({maintitle, subtitle, metacritic, image}) {
   
 
   return (
-    <div className=" ">
+    <motion.div
+    whileHover={{ scale: 1.06 }}
+    onHoverStart={e => {}}
+    onHoverEnd={e => {}} >
       <a
         href=""
         className=" relative block overflow-hidden bg-center rounded-xl "
@@ -47,7 +51,7 @@ function Card({maintitle, subtitle, metacritic, image}) {
           <p className="text-sm truncate">{subtitle}</p>
         </div>
       </a>
-    </div>
+    </motion.div>
   );
 }
 
