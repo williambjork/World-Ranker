@@ -20,7 +20,8 @@ const Home: NextPage = () => {
     const data = await response.json();
     setGames(data.results);
     console.log(games);
-  }
+  } 
+
 
   return (
     <div>
