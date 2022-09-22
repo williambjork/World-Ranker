@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
   async function fetchGames() {
     const url =
-      "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2020-09-01,2020-09-30&platforms=18,1,7";
+      "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2020-09-12,2022-07-30";
     const response = await fetch(url);
     const data = await response.json();
     setGames(data.results);
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
                 scale: 1,
               }}
               transition={{
-                ease: "easeOut",
+                type: 'spring',
                 duration: 1,
               }}
                 >
