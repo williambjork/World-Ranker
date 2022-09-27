@@ -36,7 +36,7 @@ const Home: NextPage = ({games}) => {
             <h2>Upcoming Games</h2>
           </div>
           <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
-            {games.map((game) => (
+            {games.map((game: any) => (
               <motion.div
               initial={{
                 x: -200,
