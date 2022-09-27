@@ -14,9 +14,9 @@ import { fetchGames } from "../lib/loadGames"
 const Home: NextPage = ({games}) => {
   
 
+const router = useRouter();
 
-
-
+console.log(games)
 
   return (
     <div>
@@ -26,16 +26,18 @@ const Home: NextPage = ({games}) => {
       </Head>
 
       <main className=" flex">
-        <Sidebar onClick={fetchGames}/> 
+        <Sidebar /> 
 
         <div className="bgmesh h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
           <Header />
-         <button onClick={fetchGames}>Fetch</button> 
+         
 
           <div className="flex justify-center text-3xl text-white pt-9 pb-2">
             <h2>Upcoming Games</h2>
           </div>
           <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
+            
+            
             {games.map((game: any) => (
               <motion.div
               initial={{
@@ -59,12 +61,23 @@ const Home: NextPage = ({games}) => {
                   maintitle={game.name}
                   subtitle={game.released}
                   image={game?.background_image}
+                  
                 />
                
               </motion.div>
+
+              
             ))}
+            <div className="flex br-3" >
+                <button>next</button>
+              </div>
           </div>
+
+          
+
         </div>
+
+        
       </main>
     </div>
   );
