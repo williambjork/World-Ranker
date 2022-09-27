@@ -11,8 +11,8 @@ import { motion } from "framer-motion";
 import { fetchGames } from "../lib/loadGames"
 
 
-const Home: NextPage = ({data}) => {
-  const [games, setGames] = useState([]);
+const Home: NextPage = ({games}) => {
+  
 
 
 
@@ -75,9 +75,7 @@ export async function getStaticProps() {
   
   
   return {
-    props: {
-      data,
-    },
+    props: { games : data.results },
   }
 }
 
