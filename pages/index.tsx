@@ -7,24 +7,15 @@ import Carousel from "../components/Carousel";
 import Card from "../components/Card";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { fetchGames } from "../lib/loadGames"
 
-const Home: NextPage = () => {
+
+const Home: NextPage = ({data}) => {
   const [games, setGames] = useState([]);
 
-   
 
-  async function fetchGames() {
-    const url =
-      "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2020-09-12,2022-07-30";
-    const response = await fetch(url);
-    const data = await response.json();
-    setGames(data.results);
-    console.log(games);
-    
-    
-    
-  } 
+
 
 
   return (
@@ -35,11 +26,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main className=" flex">
-        <Sidebar />
+        <Sidebar onClick={fetchGames}/> 
 
         <div className="bgmesh h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
           <Header />
-          <button onClick={fetchGames}>Fetch</button>
+         <button onClick={fetchGames}>Fetch</button> 
 
           <div className="flex justify-center text-3xl text-white pt-9 pb-2">
             <h2>Upcoming Games</h2>
@@ -78,5 +69,16 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const data = await fetchGames()
+  
+  
+  return {
+    props: {
+      data,
+    },
+  }
+}
 
 export default Home;
