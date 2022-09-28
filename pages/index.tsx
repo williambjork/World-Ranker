@@ -4,10 +4,10 @@ import Sidebar from "../components/Sidebar";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Carousel from "../components/Carousel";
-import Card from "../components/Card";
+import CardList from "../components/CardList";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
+
 import { fetchGames } from "../lib/loadGames"
 import { trackPromise, usePromiseTracker} from 'react-promise-tracker';
 
@@ -42,42 +42,7 @@ console.log(games)
           </div>
           
           
-          <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
-            
-          
-            {games.map((game: any) => (
-              <motion.div
-              initial={{
-                x: -200,
-                opacity: 0,
-                scale: 0.5,
-              }}
-              animate={{
-                x: 0,
-                opacity: 1,
-                scale: 1,
-              }}
-              transition={{
-                type: 'spring',
-                duration: 1,
-              }}
-                >
-                <Card
-                  metacritic={game.metacritic}
-                  key={game.id}
-                  maintitle={game.name}
-                  subtitle={game.released}
-                  image={game?.background_image}
-                  
-                />
-               
-              </motion.div>
-              
-            ))}
-            <div className="flex br-3" >
-                <button>next</button>
-              </div>
-          </div>
+          <CardList games={games} />
          
           
 

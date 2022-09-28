@@ -11,6 +11,7 @@ import { Router, useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { fetchTopGames } from "../lib/loadGames"
 import  useFetch  from "../hooks/useFetch"
+import CardList from '../components/CardList';
 type Props = {}
 
 function topGames({games, next}: Props) {
@@ -34,43 +35,15 @@ function topGames({games, next}: Props) {
               <div className="flex justify-center text-3xl text-white pt-9 pb-2">
                 <h2>Top Games</h2>
               </div>
-              <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
-                {games.map((game : any) => (
-                  <motion.div
-                  initial={{
-                    x: -200,
-                    opacity: 0,
-                    scale: 0.5,
-                  }}
-                  animate={{
-                    x: 0,
-                    opacity: 1,
-                    scale: 1,
-                  }}
-                  transition={{
-                    type: 'spring',
-                    duration: 1,
-                  }}
-                    >
-                    <Card
-                      metacritic={game.metacritic}
-                      key={game.id}
-                      maintitle={game.name}
-                      subtitle={game.released}
-                      image={game?.background_image}
-                    />
-                   
-                  </motion.div>
-
-                  
-                ))}
+              
+              <CardList games={games} />
 
               <div className="flex br-3" >
                 <button onClick={() => {router.push(useFetch({next}))}}>next</button>
               </div>
 
           
-              </div>
+              
             </div>
           </main>
         </div>
