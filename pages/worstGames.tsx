@@ -1,10 +1,7 @@
 import Head from 'next/head';
 import React from 'react'
-import Card from '../components/Card';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
-import { fetchWorstGames } from "../lib/loadGames"
-import { motion } from "framer-motion";
 import CardList from '../components/CardList';
 
 type Props = {}

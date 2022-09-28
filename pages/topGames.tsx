@@ -1,15 +1,8 @@
 import React from 'react'
-import type { NextPage } from "next";
 import Head from "next/head";
 import Sidebar from "../components/Sidebar";
-import { useEffect, useState } from "react";
 import Header from "../components/Header";
-import Carousel from "../components/Carousel";
-import Card from "../components/Card";
-import Image from "next/image";
 import { Router, useRouter } from "next/router";
-import { motion } from "framer-motion";
-import { fetchTopGames } from "../lib/loadGames"
 import  useFetch  from "../hooks/useFetch"
 import CardList from '../components/CardList';
 type Props = {}
