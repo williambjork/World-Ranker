@@ -62,7 +62,12 @@ function worstGames({games}: Props) {
     };
 
     export async function getStaticProps() {
-        const data = await fetchWorstGames()
+        const url =
+    "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&metacritic=1,35";
+    const response = await fetch(url);
+    const data = await response.json();
+  
+    
         
         
         return {

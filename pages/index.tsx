@@ -100,7 +100,7 @@ export async function getStaticProps() {
     const games = await response.json();
   
   return {
-    props: { games : await Promise.all(games.results) },
+    props: { games : (games.results) },
   }
 
 }
