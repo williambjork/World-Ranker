@@ -9,13 +9,15 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { fetchGames } from "../lib/loadGames"
-import { trackPromise} from 'react-promise-tracker';
+import { trackPromise, usePromiseTracker} from 'react-promise-tracker';
 
 
 const Home: NextPage = ({games}) => {
   
 
 const router = useRouter();
+const { promiseInProgress } = usePromiseTracker();
+
 
 console.log(games)
 
@@ -38,6 +40,8 @@ console.log(games)
           <div className="flex justify-center text-3xl text-white pt-9 pb-2">
             <h2>Upcoming Games</h2>
           </div>
+          
+          
           <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
             
           
@@ -68,16 +72,13 @@ console.log(games)
                 />
                
               </motion.div>
-
-              
-
               
             ))}
             <div className="flex br-3" >
                 <button>next</button>
               </div>
           </div>
-
+         
           
 
         </div>
@@ -88,16 +89,22 @@ console.log(games)
   );
 };
 
+
 export async function getStaticProps() {
   
   
-  const data = await fetchGames();
   
-  
+  const url =
+    "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2020-09-12,2022-07-30";
+    const response = await fetch(url);
+    const games = await response.json();
   
   return {
-    props: { games : data.results },
+    props: { games : await Promise.all(games.results) },
   }
+
 }
+  
+
 
 export default Home;
