@@ -1,19 +1,14 @@
+import Head from 'next/head';
 import React from 'react'
-import type { NextPage } from "next";
-import Head from "next/head";
-import Sidebar from "../components/Sidebar";
-import { useEffect, useState } from "react";
-import Header from "../components/Header";
-import Carousel from "../components/Carousel";
-import Card from "../components/Card";
-import Image from "next/image";
-import { useRouter } from "next/router";
+import Card from '../components/Card';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
+import { fetchWorstGames } from "../lib/loadGames"
 import { motion } from "framer-motion";
-import { fetchTopGames } from "../lib/loadGames"
 
 type Props = {}
 
-function topGames({games}: Props) {
+function worstGames({games}: Props) {
     return (
         <div>
           <Head>
@@ -29,7 +24,7 @@ function topGames({games}: Props) {
              
     
               <div className="flex justify-center text-3xl text-white pt-9 pb-2">
-                <h2>Top Games</h2>
+                <h2>Worst Games</h2>
               </div>
               <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
                 {games.map((game : any) => (
@@ -67,7 +62,7 @@ function topGames({games}: Props) {
     };
 
     export async function getStaticProps() {
-        const data = await fetchTopGames()
+        const data = await fetchWorstGames()
         
         
         return {
@@ -75,4 +70,4 @@ function topGames({games}: Props) {
         }
       }
 
-export default topGames
+export default worstGames
