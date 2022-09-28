@@ -7,13 +7,16 @@ import Header from "../components/Header";
 import Carousel from "../components/Carousel";
 import Card from "../components/Card";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { fetchTopGames } from "../lib/loadGames"
-
+import  useFetch  from "../hooks/useFetch"
 type Props = {}
 
-function topGames({games}: Props) {
+function topGames({games, next}: Props) {
+
+  const router = useRouter();
+
     return (
         <div>
           <Head>
@@ -58,7 +61,15 @@ function topGames({games}: Props) {
                     />
                    
                   </motion.div>
+
+                  
                 ))}
+
+              <div className="flex br-3" >
+                <button onClick={() => {router.push(useFetch({next}))}}>next</button>
+              </div>
+
+          
               </div>
             </div>
           </main>
@@ -67,11 +78,15 @@ function topGames({games}: Props) {
     };
 
     export async function getStaticProps() {
-        const data = await fetchTopGames()
-        
-        
+
+      const url =
+      "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&metacritic=95,100";
+    const response = await fetch(url);
+    const data = await response.json();
+      
         return {
-          props: { games : data.results },
+          props: { games : data.results,
+                  next : data.next },
         }
       }
 
