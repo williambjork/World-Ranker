@@ -7,8 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        oswald: "Oswald, serif"
+        oswald: "Oswald, serif",
+        eurosile: "Eurostile, serif",
       },
+      
     },
     
   },
