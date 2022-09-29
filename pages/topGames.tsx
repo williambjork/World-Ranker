@@ -25,7 +25,7 @@ function topGames({games, next}: Props) {
               <Header />
              
     
-              <div className="flex justify-center text-3xl text-white pt-9 pb-2">
+              <div className="flex justify-center font-oswald text-3xl text-white pt-9 pb-2">
                 <h2>Top Games</h2>
               </div>
               
