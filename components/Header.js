@@ -6,8 +6,8 @@ function Header() {
   return (
     <div className="flex">
       
-      <BackButton />
-      <Searchbar />
+     {/* <BackButton /> */}
+      <Searchbar /> 
       
     </div>
   );

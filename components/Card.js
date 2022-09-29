@@ -46,7 +46,7 @@ function Card({maintitle, subtitle, metacritic, image}) {
 
         <div className="relative  p-4 text-white bg-black bg-opacity-40">
         
-          <h5 className="text-xl font-bold  truncate">{maintitle}</h5>
+          <h5 className="text-xl font-bold font-eurostile truncate">{maintitle}</h5>
 
           <p className="text-sm truncate">{subtitle}</p>
         </div>
