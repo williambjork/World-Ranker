@@ -5,7 +5,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        oswald: "Oswald, serif"
+      },
+    },
+    
   },
   plugins: [
     require('tailwind-scrollbar-hide')
