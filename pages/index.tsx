@@ -28,7 +28,7 @@ const Home: NextPage = ({ games }) => {
         <Image src={globeblack}  priority="true"  height={400} width={840} />
           
         <button className="text-white font-oswald hover:underline  pt-9"
-                onClick={() => {router.push("/topGames")}}>Enter</button>
+                onClick={() => {router.push("/home")}}>Enter</button>
           
         </div>
       </main>

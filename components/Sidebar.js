@@ -25,7 +25,7 @@ function Sidebar(props) {
         
        {/* <User /> */}
 
-        <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/" title="Home"/>
+        <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/home" title="Home"/>
         <SidebarButton icon={<BookmarkIcon className="w-6 h-6"/>} url="/topGames" title="Top Games"/>
         <SidebarButton icon={<CloudIcon className="w-6 h-6"/>} url="/worstGames" title="Shit Games"/> 
         <SidebarButton icon={<UserIcon className="w-6 h-6" />} title="Community"/>
