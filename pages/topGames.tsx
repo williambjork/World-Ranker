@@ -21,7 +21,7 @@ function topGames({games, next}: Props) {
           <main className=" flex">
             <Sidebar /> 
     
-            <div className="bgmesh h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
+            <div className="bgmeshdark h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
               <Header />
              
     

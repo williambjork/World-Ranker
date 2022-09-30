@@ -26,6 +26,16 @@
   
 }
 
+.bgmeshdark {
+    background-color: hsla(0,0%,0%,1);
+    background-image: radial-gradient(at 2% 4%, hsla(149,88%,70%,0.14) 0px, transparent 50%),
+    radial-gradient(at 4% 49%, hsla(340,73%,69%,0.18) 0px, transparent 50%),
+    radial-gradient(at 40% 87%, hsla(340,73%,69%,0.23) 0px, transparent 50%),
+    radial-gradient(at 100% 88%, hsla(211,76%,69%,0.42) 0px, transparent 50%),
+    radial-gradient(at 40% 20%, hsla(34,77%,69%,0.29) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(78,73%,69%,0.32) 0px, transparent 50%);
+}
+
 .n-down {
    
     border-radius: 51px;
