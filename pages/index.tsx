@@ -23,7 +23,7 @@ const Home: NextPage = ({ games }) => {
         
        
 
-        <div className="bg-black pb-5 flex flex-col justify-center items-center h-screen w-screen  scrollbar-hide">
+        <div className="bgmeshdark pb-5 flex flex-col justify-center items-center h-screen w-screen  scrollbar-hide">
           
         <Image src={globeblack}  priority="true"  height={400} width={840} />
           
