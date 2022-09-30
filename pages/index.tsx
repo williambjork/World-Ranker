@@ -23,11 +23,12 @@ const Home: NextPage = ({ games }) => {
         
        
 
-        <div className="bg-black justify-center items-center h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
+        <div className="bg-black pb-5 flex flex-col justify-center items-center h-screen w-screen  scrollbar-hide">
           
         <Image src={globeblack}  priority="true"  height={400} width={840} />
           
-
+        <button className="text-white font-oswald hover:underline  pt-9"
+                onClick={() => {router.push("/topGames")}}>Enter</button>
           
         </div>
       </main>
