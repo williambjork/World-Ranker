@@ -31,9 +31,7 @@ function topGames({games, next}: Props) {
               
               <CardList games={games} />
 
-              <div className="flex br-3" >
-                <button onClick={() => {router.push(useFetch({next}))}}>next</button>
-              </div>
+              
 
           
               
