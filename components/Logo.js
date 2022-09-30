@@ -1,4 +1,4 @@
-import globe from "../src/images/globelobe-white.png";
+import globe from "../src/images/WorldRanker2-white.png";
 import Image from "next/image";
 
 function Logo() {

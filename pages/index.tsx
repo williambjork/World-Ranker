@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import CardList from "../components/CardList";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import globeblack from "../src/images/globelobe-black.png";
+import globeblack from "../src/images/WorldRanker2-white.png";
 
 const Home: NextPage = ({ games }) => {
   const router = useRouter();
@@ -21,9 +21,9 @@ const Home: NextPage = ({ games }) => {
 
       <main className=" flex">
         
-        <Sidebar />
+       
 
-        <div className="bgmesh justify-center items-center h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
+        <div className="bg-black justify-center items-center h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
           
         <Image src={globeblack}  priority="true"  height={400} width={840} />
           
