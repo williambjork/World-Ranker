@@ -1,14 +1,14 @@
 import React from 'react'
 import CardList from '../components/CardList'
 import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
+import SidebarInit from '../components/SidebarInit'
 
 type Props = {}
 
 function home({}: Props) {
   return (
     <main className=" flex">
-            <Sidebar /> 
+            <SidebarInit /> 
     
             <div className="bgmeshdark h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
               
