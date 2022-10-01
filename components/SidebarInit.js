@@ -48,7 +48,7 @@ function SidebarInit(props) {
       }}
       transition={{
         
-        duration: 4,
+        duration: 2,
       }} className="pb-6 pt-6">
         <Logo />
       </motion.div>

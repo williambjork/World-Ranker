@@ -43,7 +43,7 @@ function Card({maintitle, subtitle, metacritic, image}) {
         <div>
         <Thumbnail  image={image} />
         </div>
-
+       
         <div className="relative  p-4 text-white bg-gray-600 bg-opacity-30">
         
           <h5 className="text-xl font-bold  truncate">{maintitle}</h5>
