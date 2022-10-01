@@ -3,6 +3,7 @@ import { BookmarkIcon } from '@heroicons/react/24/solid'
 import { CloudIcon } from '@heroicons/react/24/solid'
 import { UserIcon } from '@heroicons/react/24/solid'
 import { CakeIcon } from '@heroicons/react/24/solid'
+import { motion } from "framer-motion";
 import Logo from "./Logo"
 
 
@@ -14,7 +15,22 @@ function SidebarInit(props) {
   
 
   return (
-    <div className="h-screen overflow-y-scroll border-r border-gray-900 px-5 py-2
+    <motion.div 
+    initial={{
+      x: -120,
+      opacity: 1,
+      scale: 1,
+    }}
+    animate={{
+      x: 0,
+      opacity: 1,
+      scale: 1,
+    }}
+    transition={{
+      type: 'spring',
+      duration: 3,
+    }}
+    className="h-screen overflow-y-scroll border-r border-gray-900 px-5 py-2
                     text-sm lg:text-sm text-white scrollbar-hide  min-w-max
                     sm:max-w-[17rem] lg:max-w-[20rem]  left-3 bg-black">
         <div className="">
@@ -35,7 +51,7 @@ function SidebarInit(props) {
             
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
