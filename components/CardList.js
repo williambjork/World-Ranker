@@ -10,9 +10,9 @@ function CardList({games}) {
             {games.map((game) => (
               <motion.div
               initial={{
-                x: -200,
+                x: -120,
                 opacity: 0,
-                scale: 0.5,
+                scale: 0.8,
               }}
               animate={{
                 x: 0,
