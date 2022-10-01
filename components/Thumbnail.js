@@ -11,3 +11,4 @@ function Thumbnail(props) {
 }
 
 export default Thumbnail
+
