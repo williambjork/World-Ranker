@@ -14,10 +14,10 @@ function worstGames({games}: Props) {
             <link rel="icon" href="/favicon.ico" />
           </Head>
     
-          <main className=" flex">
+          <main className="bgmeshdark flex">
             <Sidebar /> 
     
-            <div className="bgmeshdark h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
+            <div className="h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
               <Header />
              
     

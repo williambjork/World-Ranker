@@ -19,11 +19,11 @@ const Home: NextPage = ({ games }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className=" flex">
+      <main className="bgmeshdark flex">
         
        
 
-        <div className="bgmeshdark pb-5 flex flex-col justify-center items-center h-screen w-screen  scrollbar-hide">
+        <div className=" pb-5 flex flex-col justify-center items-center h-screen w-screen  scrollbar-hide">
           
         <Image src={globeblack}  priority="true"  height={400} width={840} />
           

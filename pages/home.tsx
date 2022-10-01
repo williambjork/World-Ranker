@@ -7,10 +7,10 @@ type Props = {}
 
 function home({}: Props) {
   return (
-    <main className=" flex">
+    <main className=" bgmeshdark flex">
             <SidebarInit /> 
     
-            <div className="bgmeshdark h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
+            <div className=" h-screen w-screen overflow-hidden overflow-y-scroll scrollbar-hide">
               
              
     

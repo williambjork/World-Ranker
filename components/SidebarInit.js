@@ -17,7 +17,7 @@ function SidebarInit(props) {
   return (
     <motion.div 
     initial={{
-      x: -120,
+      x: -200,
       opacity: 1,
       scale: 1,
     }}
@@ -27,26 +27,130 @@ function SidebarInit(props) {
       scale: 1,
     }}
     transition={{
-      type: 'spring',
-      duration: 3,
+      duration: 1,
+      ease: [0, 0.71, 0.2, 1.01]
     }}
     className="h-screen overflow-y-scroll border-r border-gray-900 px-5 py-2
                     text-sm lg:text-sm text-white scrollbar-hide  min-w-max
                     sm:max-w-[17rem] lg:max-w-[20rem]  left-3 bg-black">
         <div className="">
        
-      <div className="pb-6 pt-6">
+      <motion.div
+      initial={{
+        x: 0,
+        opacity: 0,
+        scale: 1,
+      }}
+      animate={{
+        x: 0,
+        opacity: 1,
+        scale: 1,
+      }}
+      transition={{
+        
+        duration: 4,
+      }} className="pb-6 pt-6">
         <Logo />
-      </div>
+      </motion.div>
         
        {/* <User /> */}
 
-        <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/home" title="POOOOOO"/>
-        <SidebarButton icon={<BookmarkIcon className="w-6 h-6"/>} url="/topGames" title="Top Games"/>
-        <SidebarButton icon={<CloudIcon className="w-6 h-6"/>} url="/worstGames" title="Shit Games"/> 
-        <SidebarButton icon={<UserIcon className="w-6 h-6" />} title="Community"/>
-        <SidebarButton icon={<CakeIcon className="w-6 h-6"/>} title="Free Cake"/>         
+      <motion.div>
+        <motion.div
+        initial={{
+          x: -200,
+          opacity: 1,
+          scale: 1,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.3,
+          delay: 0.1,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}>
+          <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/home" title="POOOOOO"/>
+        </motion.div>
 
+        <motion.div
+        initial={{
+          x: -200,
+          opacity: 1,
+          scale: 1,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.3,
+          delay: 0.2,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}>
+          <SidebarButton icon={<BookmarkIcon className="w-6 h-6"/>} url="/topGames" title="Top Games"/>
+        </motion.div>
+
+        <motion.div
+        initial={{
+          x: -200,
+          opacity: 1,
+          scale: 1,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.3,
+          delay: 0.3,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}>
+          <SidebarButton icon={<CloudIcon className="w-6 h-6"/>} url="/worstGames" title="Shit Games"/> 
+        </motion.div>
+
+        <motion.div
+        initial={{
+          x: -200,
+          opacity: 1,
+          scale: 1,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.3,
+          delay: 0.4,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}>
+        <SidebarButton icon={<UserIcon className="w-6 h-6" />} title="Community"/>
+        </motion.div>
+        
+        <motion.div
+        initial={{
+          x: -200,
+          opacity: 1,
+          scale: 1,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.3,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}>
+        <SidebarButton icon={<CakeIcon className="w-6 h-6"/>} title="Free Cake"/>         
+      </motion.div>
+      </motion.div>
             <div className="flex items-center space-x-3  text-gray-400 pl-2 pt-9">
             
             </div>
