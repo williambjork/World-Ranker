@@ -7,12 +7,12 @@ function CardList({games}) {
 <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
             
           
-            {games.map((game) => (
+            {games.map((game, i) => (
               <motion.div
               initial={{
-                x: -120,
+                x: -20,
                 opacity: 0,
-                scale: 0.8,
+                scale: 0.95,
               }}
               animate={{
                 x: 0,
@@ -22,6 +22,7 @@ function CardList({games}) {
               transition={{
                 type: 'spring',
                 duration: 1,
+                delay: i * 0.1
               }}
                 >
                 <Card

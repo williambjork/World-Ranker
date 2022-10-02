@@ -49,7 +49,7 @@ function Card({maintitle, subtitle, metacritic, image}) {
         
         <h5 className="text-xl font-bold truncate ">{maintitle}</h5>
 
-          <p className="text-sm truncate">{subtitle}</p>
+          <p className="text-sm text-gray-300 truncate">{subtitle}</p>
         </div>
       </a>
     </motion.div>
