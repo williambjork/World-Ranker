@@ -47,6 +47,6 @@
 }
 
 .fade-image {
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 30%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 70%, transparent 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
   }
