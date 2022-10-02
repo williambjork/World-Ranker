@@ -47,9 +47,9 @@ function Card({maintitle, subtitle, metacritic, image}) {
        
         <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
         
-        <h5 className="text-xl font-bold truncate ">{maintitle}</h5>
+        <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
 
-          <p className="text-sm text-gray-300 truncate">{subtitle}</p>
+          <p className="text-xs text-gray-300 truncate">{subtitle}</p>
         </div>
       </a>
     </motion.div>
