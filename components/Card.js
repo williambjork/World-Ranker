@@ -23,7 +23,7 @@ function Card({maintitle, subtitle, metacritic, image}) {
     onHoverEnd={e => {}} >
       <a
         href=""
-        className=" relative block overflow-hidden bg-center rounded-xl "
+        className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
         
       >
         {/*
