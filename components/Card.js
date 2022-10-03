@@ -7,19 +7,22 @@ function Card({maintitle, subtitle, metacritic, image}) {
   const [isOpen, setIsOpen] = useState(false);
   const [metaColor, setMetaColor] = useState(null)
 
-  useEffect(() => {
+  {/* useEffect(() => {
     if(metacritic >= 85) {
       setMetaColor("green-400")
     } else {
       setMetaColor("white")
     }
-  }, [metacritic]);
+  }, [metacritic]); */}
 
-  
+  const handleClick = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  }
 
   return (
     <motion.div
-    onClick={() => setIsOpen(!isOpen)}
+    onClick={handleClick}
     whileHover={{ scale: 1.06 }}
     onHoverStart={e => {}}
     onHoverEnd={e => {}} >
