@@ -7,10 +7,10 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import globeblack from "../src/images/WorldRanker2-white.png";
 
-const Home: NextPage = ({ games }) => {
+const Home: NextPage = () => {
   const router = useRouter();
 
-  console.log(games);
+ 
 
   return (
     <div>
@@ -36,15 +36,5 @@ const Home: NextPage = ({ games }) => {
   );
 };
 
-export async function getStaticProps() {
-  const url =
-    "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&dates=2020-09-12,2022-07-30";
-  const response = await fetch(url);
-  const games = await response.json();
-
-  return {
-    props: { games: games.results },
-  };
-}
 
 export default Home;
