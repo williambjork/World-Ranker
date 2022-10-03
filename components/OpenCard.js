@@ -1,34 +1,11 @@
-import { useEffect, useState } from "react";
-import Thumbnail from "./Thumbnail"
 import { motion } from "framer-motion"
-import OpenCard from "./OpenCard"
+import Thumbnail from "./Thumbnail"
 
-function Card({maintitle, subtitle, metacritic, image}) {
-
-  const [isOpen, setIsOpen] = useState(true);
-  const [metaColor, setMetaColor] = useState(null)
-
-  {/* useEffect(() => {
-    if(metacritic >= 85) {
-      setMetaColor("green-400")
-    } else {
-      setMetaColor("white")
-    }
-  }, [metacritic]); */}
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
-  }
-
+function OpenCard({maintitle, subtitle, metacritic, image}) {
   return (
     <motion.div
-    onClick={handleClick}
-    whileHover={{ scale: 1.06 }}
-    onHoverStart={e => {}}
-    onHoverEnd={e => {}} >
-      
-      {isOpen && (
+    
+    >
       <a
         href=""
         className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
@@ -57,17 +34,13 @@ function Card({maintitle, subtitle, metacritic, image}) {
        
         <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
         
-        <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
+        <h5 className="text-xl  truncate font-oswald">OpenCard!</h5>
 
           <p className="text-xs text-gray-300 truncate">{subtitle}</p>
         </div>
-      </a> )}
-
-      {!isOpen && ( <OpenCard />)}
+      </a>
     </motion.div>
-
-    
-  );
+  )
 }
 
-export default Card;
+export default OpenCard
