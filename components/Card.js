@@ -1,40 +1,41 @@
 import { useEffect, useState } from "react";
-import Thumbnail from "./Thumbnail"
-import { motion } from "framer-motion"
-import OpenCard from "./OpenCard"
+import Thumbnail from "./Thumbnail";
+import { motion } from "framer-motion";
+import OpenCard from "./OpenCard";
 
-function Card({maintitle, subtitle, metacritic, image}) {
+function Card({ maintitle, subtitle, metacritic, image }) {
+  
+  const [metaColor, setMetaColor] = useState(null);
 
-  const [isOpen, setIsOpen] = useState(true);
-  const [metaColor, setMetaColor] = useState(null)
-
-  {/* useEffect(() => {
+  {
+    /* useEffect(() => {
     if(metacritic >= 85) {
       setMetaColor("green-400")
     } else {
       setMetaColor("white")
     }
-  }, [metacritic]); */}
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
+  }, [metacritic]); */
   }
+
+  
 
   return (
     <motion.div
-    onClick={handleClick}
-    whileHover={{ scale: 1.06 }}
-    onHoverStart={e => {}}
-    onHoverEnd={e => {}} >
       
-      {isOpen && (
-      <a
-        href=""
-        className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
-        
-      >
-        {/*
+      transition={{ duration: 0.2}}
+      onClick={handleClick}
+      whileHover={{ scale: 1.06 }}
+      onHoverStart={(e) => {}}
+      onHoverEnd={(e) => {}}
+      
+    >
+
+      
+        <a
+          href=""
+          className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
+        >
+          {/*
         <span className={`absolute z-10 inline-flex items-center px-3 py-1 text-xs font-semibold text-white bg-black rounded-full  right-4 top-4`}>
           {metacritic}
           <svg
@@ -47,26 +48,20 @@ function Card({maintitle, subtitle, metacritic, image}) {
           </svg>
         </span>
   */}
+
+          <div>
+            <Thumbnail image={image} />
+          </div>
+
+          <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
+            <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
+
+            <p className="text-xs text-gray-300 truncate">{subtitle}</p>
+          </div>
+        </a>
       
-        <div>
-          
-        <Thumbnail  image={image} />
-        
-        </div>
-        
-       
-        <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
-        
-        <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
-
-          <p className="text-xs text-gray-300 truncate">{subtitle}</p>
-        </div>
-      </a> )}
-
-      {!isOpen && ( <OpenCard />)}
+      
     </motion.div>
-
-    
   );
 }
 

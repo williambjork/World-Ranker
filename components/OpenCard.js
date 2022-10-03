@@ -8,7 +8,7 @@ function OpenCard({maintitle, subtitle, metacritic, image}) {
     >
       <a
         href=""
-        className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
+        className="border-b-2  border-gray-600 flex flex-col justify-center items-center overflow-hidden bg-center rounded-xl "
         
       >
         {/*

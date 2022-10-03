@@ -1,15 +1,19 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Card from "./Card"
+import OpenCard from "./OpenCard";
 
 
 
 
 function CardList({games, movies}) {
 
-  
+  const [isOpen, setIsOpen] = useState(false);
 
-
+  const handleClick = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
 
   return (
     
@@ -17,6 +21,9 @@ function CardList({games, movies}) {
             
           
             {games.map((game, i) => (
+              
+              
+
               <motion.div
               initial={{
                 x: -20,
@@ -35,23 +42,24 @@ function CardList({games, movies}) {
                 delay: i * 0.1
               }}
                 >
+                  {!isOpen && (
                 <Card
                   metacritic={game.metacritic}
                   key={game.id}
                   maintitle={game.name}
                   subtitle={game.released}
                   image={game?.background_image}
+                  layout="card"
                   
-                />
+                  onClick={handleClick}
+                /> )}
                
-              </motion.div>
-            ))}
+              </motion.div>  
+            ))} 
 
-           
+      
 
-            <div className="flex br-3" >
-                <button>next</button>
-              </div>
+        {isOpen && ( <OpenCard layoutId="card"/> )}
           </div>
         
       
