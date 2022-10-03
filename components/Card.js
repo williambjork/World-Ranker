@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 
 function Card({maintitle, subtitle, metacritic, image}) {
 
+  const [isOpen, setIsOpen] = useState(false);
   const [metaColor, setMetaColor] = useState(null)
 
   useEffect(() => {
@@ -18,7 +19,7 @@ function Card({maintitle, subtitle, metacritic, image}) {
 
   return (
     <motion.div
-    
+    onClick={() => setIsOpen(!isOpen)}
     whileHover={{ scale: 1.06 }}
     onHoverStart={e => {}}
     onHoverEnd={e => {}} >
@@ -40,11 +41,13 @@ function Card({maintitle, subtitle, metacritic, image}) {
           </svg>
         </span>
   */}
-
+      {isOpen && (
         <div>
+          
         <Thumbnail  image={image} />
         
         </div>
+        )}
        
         <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
         
