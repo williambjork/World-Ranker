@@ -2,11 +2,11 @@ import Head from 'next/head';
 import React from 'react'
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
-import CardList from '../components/CardList';
+import MovieCardList from '../components/MovieCardList';
 
 type Props = {}
 
-function worstGames({games}: Props) {
+function topMovies({movies}: Props) {
     return (
         <div>
           <Head>
@@ -22,10 +22,10 @@ function worstGames({games}: Props) {
              
     
               <div className="flex justify-center text-3xl text-white pt-9 pb-2">
-                <h2>Worst Games</h2>
+                <h2>Movies</h2>
               </div>
 
-              <CardList games={games} />
+              <MovieCardList movies={movies} />
 
             </div>
           </main>
@@ -35,7 +35,7 @@ function worstGames({games}: Props) {
 
     export async function getStaticProps() {
         const url =
-    "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&metacritic=1,35";
+    "https://api.themoviedb.org/3/movie/550?api_key=6d0fa2197867b2f5e0c1ed6a22813e94";
     const response = await fetch(url);
     const data = await response.json();
   
@@ -43,8 +43,8 @@ function worstGames({games}: Props) {
         
         
         return {
-          props: { games : data.results },
+          props: { movies : data.results },
         }
       }
 
-export default worstGames
+export default topMovies

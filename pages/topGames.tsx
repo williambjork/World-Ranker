@@ -7,7 +7,7 @@ import  useFetch  from "../hooks/useFetch"
 import CardList from '../components/CardList';
 type Props = {}
 
-function topGames({games, next}: Props) {
+function topGames({data, next}: Props) {
 
   const router = useRouter();
 
@@ -26,10 +26,10 @@ function topGames({games, next}: Props) {
              
     
               <div className="flex justify-center font-eurostile text-3xl text-white pt-9 pb-2">
-                <h2>Top Games</h2>
+                <h2>Games</h2>
               </div>
               
-              <CardList games={games} />
+              <CardList games={data} />
 
               
 
@@ -49,7 +49,7 @@ function topGames({games, next}: Props) {
     const data = await response.json();
       
         return {
-          props: { games : data.results,
+          props: { data : data.results,
                   next : data.next },
         }
       }
