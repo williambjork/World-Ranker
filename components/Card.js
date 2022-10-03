@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import OpenCard from "./OpenCard";
 
 function Card({ maintitle, subtitle, metacritic, image }) {
-  
+  const [isOpen, setIsOpen] = useState(false);
   const [metaColor, setMetaColor] = useState(null);
 
   {
@@ -17,7 +17,10 @@ function Card({ maintitle, subtitle, metacritic, image }) {
   }, [metacritic]); */
   }
 
-  
+  const handleClick = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
 
   return (
     <motion.div
@@ -30,7 +33,7 @@ function Card({ maintitle, subtitle, metacritic, image }) {
       
     >
 
-      
+      {isOpen && ( <OpenCard layoutId="card"/> )}
         <a
           href=""
           className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
