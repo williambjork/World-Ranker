@@ -18,6 +18,7 @@ function Card({maintitle, subtitle, metacritic, image}) {
 
   return (
     <motion.div
+    
     whileHover={{ scale: 1.06 }}
     onHoverStart={e => {}}
     onHoverEnd={e => {}} >
