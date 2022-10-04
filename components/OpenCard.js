@@ -29,7 +29,7 @@ function OpenCard({maintitle, subtitle, metacritic, image, handleClose}) {
         <Backdrop onClick={handleClose}>
             <motion.div
                 onClick={(e) => e.stopPropagation()}  
-                className="modal orange-gradient"
+                className="margin-auto flex flex-col items-center w-screen h-screen"
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"
