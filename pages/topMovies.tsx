@@ -6,9 +6,23 @@ import MovieCardList from '../components/MovieCardList';
 
 type Props = {}
 
-function topMovies({data}: Props) {
+async function fetchMovies() {
+  
+  const url =
+  "https://api.themoviedb.org/3/movie/550?api_key=6d0fa2197867b2f5e0c1ed6a22813e94";
+  const response = await fetch(url);
+  const data = await response.json();
 
- console.log(data)
+  console.log("click")
+      return {
+         data 
+      }
+     
+  }
+
+function topMovies(movies : Props) {
+
+ console.log(movies)
     return (
         <div>
           <Head>
@@ -29,7 +43,9 @@ function topMovies({data}: Props) {
                 <h2>Movies</h2>
               </div>
 
-              <MovieCardList movies={data} /> 
+              <button onClick={fetchMovies}>fetch</button>
+
+              {/* <MovieCardList movies={movies} /> */}
 
             </div>
           </main>
@@ -37,7 +53,7 @@ function topMovies({data}: Props) {
       );
     };
 
-   export async function getStaticProps() {
+ {/* export async function getStaticProps() {
         const url =
     "https://api.themoviedb.org/3/movie/550?api_key=6d0fa2197867b2f5e0c1ed6a22813e94";
     const response = await fetch(url);
@@ -47,8 +63,8 @@ function topMovies({data}: Props) {
         
         
         return {
-          props: { data : data },
+          props: { movies : data },
         }
-      } 
+      } */}
 
 export default topMovies
