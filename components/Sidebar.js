@@ -3,6 +3,9 @@ import { BookmarkIcon } from '@heroicons/react/24/solid'
 import { CloudIcon } from '@heroicons/react/24/solid'
 import { UserIcon } from '@heroicons/react/24/solid'
 import { CakeIcon } from '@heroicons/react/24/solid'
+import { PuzzlePieceIcon } from '@heroicons/react/24/solid'
+import { FilmIcon } from '@heroicons/react/24/solid'
+import { MusicalNoteIcon } from '@heroicons/react/24/solid'
 import Logo from "./Logo"
 
 
@@ -26,9 +29,9 @@ function Sidebar(props) {
        {/* <User /> */}
 
         <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/home" title="Home"/>
-        <SidebarButton icon={<BookmarkIcon className="w-6 h-6"/>} url="/topGames" title="Games"/>
-        <SidebarButton icon={<CloudIcon className="w-6 h-6"/>} url="/topMovies" title="Movies"/> 
-        <SidebarButton icon={<UserIcon className="w-6 h-6" />} title="Music"/>
+        <SidebarButton icon={<PuzzlePieceIcon className="w-6 h-6"/>} url="/topGames" title="Games"/>
+        <SidebarButton icon={<FilmIcon className="w-6 h-6"/>} url="/topMovies" title="Movies"/> 
+        <SidebarButton icon={<MusicalNoteIcon className="w-6 h-6" />} title="Music"/>
         <SidebarButton icon={<CakeIcon className="w-6 h-6"/>} title="Free Cake"/>         
 
             <div className="flex items-center space-x-3  text-gray-400 pl-2 pt-9">

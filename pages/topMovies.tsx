@@ -6,23 +6,10 @@ import MovieCardList from '../components/MovieCardList';
 
 type Props = {}
 
-async function fetchMovies() {
-  
-  const url =
-  "https://api.themoviedb.org/3/movie/550?api_key=6d0fa2197867b2f5e0c1ed6a22813e94";
-  const response = await fetch(url);
-  const data = await response.json();
 
-  console.log("click")
-      return {
-         data 
-      }
-     
-  }
+function topMovies(data : Props) {
 
-function topMovies(movies : Props) {
-
- console.log(movies)
+ console.log(data)
     return (
         <div>
           <Head>
@@ -43,9 +30,9 @@ function topMovies(movies : Props) {
                 <h2>Movies</h2>
               </div>
 
-              <button onClick={fetchMovies}>fetch</button>
+              
 
-              {/* <MovieCardList movies={movies} /> */}
+              <MovieCardList movies={data} /> 
 
             </div>
           </main>
@@ -67,4 +54,19 @@ function topMovies(movies : Props) {
         }
       } */}
 
+
+      export async function getStaticProps() {
+
+        const url =
+        "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&metacritic=95,100";
+      const response = await fetch(url);
+      const data = await response.json();
+        
+          return {
+            props: { data : data.result
+                     },
+          }
+        }
+
 export default topMovies
+
