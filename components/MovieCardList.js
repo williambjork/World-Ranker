@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Card from "./Card"
+import MovieCard from "./MovieCard"
 
 function MovieCardList({movies}) {
 
@@ -27,7 +27,7 @@ function MovieCardList({movies}) {
                 delay: i * 0.1
               }}
                 >
-                <Card
+                <MovieCard
                   
                   key={movie.id}
                   maintitle={movie.title}
