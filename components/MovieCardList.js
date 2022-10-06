@@ -9,7 +9,7 @@ function MovieCardList({movies}) {
 <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
             
           
-            {movies.map((movie, i) => (
+            {Object.entries(movies).map((movie, i) => (
               <motion.div
               initial={{
                 x: -20,
@@ -29,10 +29,10 @@ function MovieCardList({movies}) {
                 >
                 <Card
                   
-                  key={movie?.id}
-                  maintitle={movie?.name}
-                  subtitle={movie?.released}
-                  image={gmovie?.background_image}
+                  key={movie.id}
+                  maintitle={movie.title}
+                  subtitle={movie.release_date}
+                  
                   
                 />
                
