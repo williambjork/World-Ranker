@@ -3,13 +3,15 @@ import MovieCard from "./MovieCard"
 
 function MovieCardList({movies}) {
 
-  console.log(movies)
+  console.log(movies[0].original_title)
   return (
+
+    
     
 <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
             
           
-            {Object.entries(movies).map((movie, i) => (
+            {movies.map((movie, i) => (
               <motion.div
               initial={{
                 x: -20,
@@ -30,7 +32,7 @@ function MovieCardList({movies}) {
                 <MovieCard
                   
                   key={movie.id}
-                  maintitle={movie.title}
+                  maintitle={movie.original_title}
                   subtitle={movie.release_date}
                   
                   
