@@ -6,6 +6,22 @@ import Sidebar from '../components/Sidebar'
 
 type Props = {}
 
+async function fetchMusic() {
+    
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '248a69af1dmsh2bd4ec49697497ap14fbeejsn8814fc4068ee',
+            'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://spotify81.p.rapidapi.com/top_200_tracks', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+}
+
 function topMusic({}: Props) {
   return (
     <div>
@@ -27,6 +43,7 @@ function topMusic({}: Props) {
                 <h2>Music</h2>
               </div>
 
+            <button onClick={fetchMusic}>fetch</button>
               
                 {/*
               <MusicCardList music={data} /> 
