@@ -10,10 +10,7 @@ function CardList({games, movies}) {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
-  };
+
 
   return (
     
@@ -51,7 +48,6 @@ function CardList({games, movies}) {
                   image={game?.background_image}
                   layout="card"
                   
-                  onClick={handleClick}
                 /> )}
                
               </motion.div>  
@@ -59,7 +55,12 @@ function CardList({games, movies}) {
 
       
 
-        {isOpen && ( <OpenCard layoutId="card"/> )}
+        {isOpen && ( <OpenCard layoutId="card"
+                                metacritic={game.metacritic}
+                                key={game.id}
+                                maintitle={game.name}
+                                subtitle={game.released}
+                                image={game?.background_image}/> )}
           </div>
         
       

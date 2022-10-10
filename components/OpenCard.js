@@ -36,6 +36,16 @@ function OpenCard({maintitle, subtitle, metacritic, image, handleClose}) {
                 exit="exit">
 
                     <h2>{maintitle}</h2>
+                    <div>
+            <Thumbnail image={image} />
+          </div>
+
+          <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
+            <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
+
+            <p className="text-xs text-gray-300 truncate">{subtitle}</p>
+          </div>
+        
                     <button onClick={handleClose}>Cose</button>
 
             </motion.div>

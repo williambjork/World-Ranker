@@ -26,7 +26,7 @@ function topMovies({data} : Props) {
               <Header />
              
     
-              <div className="flex justify-center text-3xl text-white pt-9 pb-2">
+              <div className="flex font-quicksand justify-center text-3xl text-white pt-9 pb-2">
                 <h2>Movies</h2>
               </div>
 

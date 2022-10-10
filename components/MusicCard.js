@@ -1,27 +1,6 @@
-import { useEffect, useState } from "react";
-import Thumbnail from "./Thumbnail";
-import { motion } from "framer-motion";
-import OpenCard from "./OpenCard";
+import React from 'react'
 
-function Card({ maintitle, subtitle, metacritic, image }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [metaColor, setMetaColor] = useState(null);
-
-  {
-    /* useEffect(() => {
-    if(metacritic >= 85) {
-      setMetaColor("green-400")
-    } else {
-      setMetaColor("white")
-    }
-  }, [metacritic]); */
-  }
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
-  };
-
+function MusicCard() {
   return (
     <motion.div
       
@@ -54,7 +33,8 @@ function Card({ maintitle, subtitle, metacritic, image }) {
 
           <div>
             <Thumbnail image={image} />
-          </div>
+          </div> 
+          
 
           <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
             <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
@@ -65,7 +45,7 @@ function Card({ maintitle, subtitle, metacritic, image }) {
       
       
     </motion.div>
-  );
+  )
 }
 
-export default Card;
+export default MusicCard

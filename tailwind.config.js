@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         oswald: "Oswald, serif",
         eurosile: "Eurostile, serif",
+        quicksand: "Quicksand, sans-serif",
       },
       
     },
