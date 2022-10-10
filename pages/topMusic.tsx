@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import Header from '../components/Header'
-import MovieCardList from '../components/MovieCardList'
+import MusicCardList from '../components/MovieCardList'
 import Sidebar from '../components/Sidebar'
 
 type Props = {}
@@ -24,12 +24,13 @@ function topMusic({}: Props) {
              
     
               <div className="flex font-quicksand justify-center text-3xl text-white pt-9 pb-2">
-                <h2>Movies</h2>
+                <h2>Music</h2>
               </div>
 
               
-
-              <MovieCardList movies={data} /> 
+                {/*
+              <MusicCardList music={data} /> 
+  */}
 
             </div>
           </main>

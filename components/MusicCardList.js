@@ -1,11 +1,12 @@
 import React from 'react'
+import MusicCard from './MusicCard'
 
 function MusicCardList() {
   return (
     <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
             
           
-            {movies.map((movie, i) => (
+            {music.map((album, i) => (
               <motion.div
               initial={{
                 x: -20,

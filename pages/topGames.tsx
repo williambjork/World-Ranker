@@ -7,7 +7,7 @@ import  useFetch  from "../hooks/useFetch"
 import CardList from '../components/CardList';
 type Props = {}
 
-function topGames({data, next}: Props) {
+function topGames({data, next} : Props) {
 
   const router = useRouter();
 
