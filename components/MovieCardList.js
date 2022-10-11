@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard"
 
 function MovieCardList({movies}) {
   const url = "https://image.tmdb.org/t/p/w533_and_h300_bestv2"
-  console.log(movies[0].original_title)
+  
   return (
 
     

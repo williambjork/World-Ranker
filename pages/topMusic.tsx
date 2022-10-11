@@ -1,28 +1,14 @@
 import Head from 'next/head'
 import React from 'react'
 import Header from '../components/Header'
-import MusicCardList from '../components/MovieCardList'
+import MusicCardList from '../components/MusicCardList'
 import Sidebar from '../components/Sidebar'
 
 type Props = {}
 
-async function fetchMusic() {
-    
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '248a69af1dmsh2bd4ec49697497ap14fbeejsn8814fc4068ee',
-            'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
-        }
-    };
-    
-    fetch('https://spotify81.p.rapidapi.com/top_200_tracks', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-}
 
-function topMusic({}: Props) {
+
+function topMusic({data}: Props) {
   return (
     <div>
           <Head>
@@ -43,7 +29,7 @@ function topMusic({}: Props) {
                 <h2>Music</h2>
               </div>
 
-            <button onClick={fetchMusic}>fetch</button>
+           
               
                 
               <MusicCardList music={data} /> 
@@ -65,13 +51,16 @@ export async function getStaticProps() {
         }
     };
     
-    fetch('https://spotify81.p.rapidapi.com/top_200_tracks', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
+    const url = 'https://spotify81.p.rapidapi.com/top_200_tracks'
+    const response = await fetch(url, options);
+    const data = await response.json();
+      
         
         return {
-          props: { data : data.results },
+          props: { data : data},
         }
       } 
 
 export default topMusic
+
+
