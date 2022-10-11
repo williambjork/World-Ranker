@@ -1,4 +1,4 @@
-import { HomeIcon } from '@heroicons/react/24/solid'
+import { FilmIcon, HomeIcon, MusicalNoteIcon, PuzzlePieceIcon } from '@heroicons/react/24/solid'
 import { BookmarkIcon } from '@heroicons/react/24/solid'
 import { CloudIcon } from '@heroicons/react/24/solid'
 import { UserIcon } from '@heroicons/react/24/solid'
@@ -72,7 +72,7 @@ function SidebarInit(props) {
           delay: 0.1,
           ease: [0, 0.71, 0.2, 1.01]
         }}>
-          <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/home" title="POOOOOO"/>
+          <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/home" title="Home"/>
         </motion.div>
 
         <motion.div
@@ -91,7 +91,7 @@ function SidebarInit(props) {
           delay: 0.2,
           ease: [0, 0.71, 0.2, 1.01]
         }}>
-          <SidebarButton icon={<BookmarkIcon className="w-6 h-6"/>} url="/topGames" title="Top Games"/>
+          <SidebarButton icon={<PuzzlePieceIcon className="w-6 h-6"/>} url="/topGames" title="Games"/>
         </motion.div>
 
         <motion.div
@@ -110,7 +110,7 @@ function SidebarInit(props) {
           delay: 0.3,
           ease: [0, 0.71, 0.2, 1.01]
         }}>
-          <SidebarButton icon={<CloudIcon className="w-6 h-6"/>} url="/worstGames" title="Shit Games"/> 
+          <SidebarButton icon={<FilmIcon className="w-6 h-6"/>} url="/topMovies" title="Movies"/> 
         </motion.div>
 
         <motion.div
@@ -129,7 +129,7 @@ function SidebarInit(props) {
           delay: 0.4,
           ease: [0, 0.71, 0.2, 1.01]
         }}>
-        <SidebarButton icon={<UserIcon className="w-6 h-6" />} title="Community"/>
+        <SidebarButton icon={<MusicalNoteIcon className="w-6 h-6" />} url="/topMusic" title="Music"/>
         </motion.div>
         
         <motion.div

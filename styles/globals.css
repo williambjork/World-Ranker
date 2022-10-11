@@ -29,7 +29,7 @@ body {
 }
 
 .bgmeshdark {
-    background-color: hsla(0,0%,0%,1);
+    background-color: black;
     background-image: radial-gradient(at 2% 4%, hsla(149,88%,70%,0.14) 0px, transparent 50%),
     radial-gradient(at 4% 49%, hsla(340,73%,69%,0.18) 0px, transparent 50%),
     radial-gradient(at 40% 87%, hsla(340,73%,69%,0.23) 0px, transparent 50%),
