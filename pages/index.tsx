@@ -7,10 +7,11 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import globeblack from "../src/images/WorldRanker2-white.png";
 
+
 const Home: NextPage = () => {
   const router = useRouter();
 
- 
+  
 
   return (
     <div>
@@ -29,6 +30,8 @@ const Home: NextPage = () => {
           
         <button className="text-white font-oswald hover:underline  pt-9"
                 onClick={() => {router.push("/home")}}>Enter</button>
+
+                
           
         </div>
       </main>
