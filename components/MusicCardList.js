@@ -29,11 +29,12 @@ function MusicCardList({music}) {
                 >
 
                 <MusicCard
-                  maintitle={artist.trackMetadata.trackName }
+                  maintitle={artist.trackMetadata.artists[0].name }
                   image={artist.trackMetadata.displayImageUri}
+                  subtitle={artist.trackMetadata.trackName}
+                  release={artist.trackMetadata.releaseDate}
                   /*}
                   key={artist.id}
-                  subtitle={artist.release_date}
                   
             */
                   

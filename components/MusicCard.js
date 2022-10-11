@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import Thumbnail from './Thumbnail';
 
-function MusicCard({image, maintitle, subtitle}) {
+function MusicCard({image, maintitle, subtitle, release}) {
   return (
     <motion.div
       
@@ -42,7 +42,11 @@ function MusicCard({image, maintitle, subtitle}) {
             <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
 
             <p className="text-xs text-gray-300 truncate">{subtitle}</p>
+
+            <p className="text-xs text-gray-400 bl-5">{release}</p>
           </div>
+
+
         </a>
       
       
