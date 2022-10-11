@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bgmeshdark flex radial-gradient">
+      <main className="bgmeshdark flex ">
         
        
 

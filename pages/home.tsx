@@ -26,9 +26,9 @@ function home({}: Props) {
                 
               </div>
               
-              
-              <h2 className="text-white font-oswald">An API implementation {text}</h2>
-
+              <div className="flex justify-center">
+                <h2 className="text-white text-xl font-oswald">An API implementation {text}</h2>
+              </div>
           
               
             </div>
