@@ -6,7 +6,26 @@ import Sidebar from '../components/Sidebar'
 
 type Props = {}
 
+async function fetchMusic() {
 
+   
+    
+    const url = 'https://spotify81.p.rapidapi.com/top_200_tracks'
+    const response = await fetch(url, 
+        { 
+            method: 'GET',
+            headers: {
+             'X-RapidAPI-Key': '248a69af1dmsh2bd4ec49697497ap14fbeejsn8814fc4068ee',
+             'X-RapidAPI-Host': 'spotify81.p.rapidapi.com' }
+    });
+    const data = await response.json();
+      console.log(data)
+      console.log(data[0].trackMetadata)
+        
+        return {
+          data
+        }
+      } 
 
 function topMusic({data}: Props) {
   return (
@@ -29,10 +48,11 @@ function topMusic({data}: Props) {
                 <h2>Music</h2>
               </div>
 
-           
+            <button onClick={fetchMusic}>fetch</button>
               
                 
               <MusicCardList music={data} /> 
+
  
 
             </div>
@@ -40,6 +60,7 @@ function topMusic({data}: Props) {
         </div>
   )
 }
+
 
 export async function getStaticProps() {
 

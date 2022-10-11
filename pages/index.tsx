@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 
         <div className=" pb-5 flex flex-col justify-center items-center h-screen w-screen  scrollbar-hide">
           
-        <Image src={globeblack}  priority="true"  height={400} width={840} />
+        <Image src={globeblack}  priority={true}  height={400} width={840} />
           
         <button className="text-white font-oswald hover:underline  pt-9"
                 onClick={() => {router.push("/home")}}>Enter</button>

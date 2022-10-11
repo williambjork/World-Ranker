@@ -1,12 +1,15 @@
 import React from 'react'
 import MusicCard from './MusicCard'
+import { motion } from "framer-motion";
 
 function MusicCardList({music}) {
+    console.log(music)
+    console.log(music[0].trackMetadata.trackName )
   return (
     <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
             
           
-            {music.map((album, i) => (
+            {music.map((artist, i) => (
               <motion.div
               initial={{
                 x: -20,
@@ -24,15 +27,17 @@ function MusicCardList({music}) {
                 delay: i * 0.1
               }}
                 >
+
                 <MusicCard
+                  maintitle={artist.trackMetadata.trackName }
+                  image={artist.trackMetadata.displayImageUri}
+                  /*}
+                  key={artist.id}
+                  subtitle={artist.release_date}
                   
-                  key={movie.id}
-                  maintitle={movie.original_title}
-                  subtitle={movie.release_date}
-                  image={url + movie.backdrop_path}
+            */
                   
-                  
-                />
+                /> 
                
               </motion.div>
               

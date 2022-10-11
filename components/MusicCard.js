@@ -1,6 +1,8 @@
 import React from 'react'
+import { motion } from "framer-motion";
+import Thumbnail from './Thumbnail';
 
-function MusicCard() {
+function MusicCard({image, maintitle, subtitle}) {
   return (
     <motion.div
       
@@ -12,7 +14,7 @@ function MusicCard() {
       
     >
 
-      {isOpen && ( <OpenCard layoutId="card"/> )}
+      
         <a
           href=""
           className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
