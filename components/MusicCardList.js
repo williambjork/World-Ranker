@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function MusicCardList({music}) {
     console.log(music)
-    console.log(music[0].trackMetadata.trackName )
+   
   return (
     <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
             
