@@ -40,35 +40,35 @@ function topMovies({data} : Props) {
       );
     };
 
-  export async function getStaticProps() {
-        const url =
-    "https://api.themoviedb.org/3/movie/top_rated?api_key=6d0fa2197867b2f5e0c1ed6a22813e94&language=en-US&page=1";
-    const response = await fetch(url);
-    const data = await response.json();
-    
-    
-  
-    
-        
-        
-        return {
-          props: { data : data.results },
-        }
-      } 
-
-  /*   export async function getStaticProps() {
-
-        const url =
-        "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&metacritic=95,100";
-      const response = await fetch(url);
-      const data = await response.json();
-        
-          return {
-            props: { data : data.results,
-                    next : data.next },
-          }
-        } */
 
 
 export default topMovies
 
+export async function getStaticProps() {
+  const url =
+"https://api.themoviedb.org/3/movie/top_rated?api_key=6d0fa2197867b2f5e0c1ed6a22813e94&language=en-US&page=1";
+const response = await fetch(url);
+const data = await response.json();
+
+
+
+
+  
+  
+  return {
+    props: { data : data.results },
+  }
+} 
+
+/*   export async function getStaticProps() {
+
+  const url =
+  "https://api.rawg.io/api/games?key=f6d4a95732b6497e929238e5994121e6&metacritic=95,100";
+const response = await fetch(url);
+const data = await response.json();
+  
+    return {
+      props: { data : data.results,
+              next : data.next },
+    }
+  } */

@@ -1,22 +1,26 @@
+import Link from "next/link";
 import { useRouter } from "next/router"
 
-function SidebarButton(props) {
+function SidebarButton({url, icon, title}) {
 
   const router = useRouter();
 
   return (
     <div className="hover:bg-gray-700 hover:neumo1 px-4 py-2 rounded">
-            <button onClick={() => {router.push(props.url)}} className="flex items-center space-x-2 font-semibold font-oswald ">
+          <Link href={`/${url}`}>
+            <a className="flex items-center space-x-2 font-semibold font-oswald ">
                 
                 
-                    {props.icon} 
+                    {icon} 
                 
 
                 <div className="flex-nowrap">
-                    <h3>{props.title}</h3>
+                    <h3>{title}</h3>
                 </div> 
 
-            </button>
+            
+            </a>
+           </Link>
         </div>
   )
 }
