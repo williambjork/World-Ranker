@@ -61,10 +61,6 @@ function topMusic({data}: Props) {
   )
 }
 
-
-
-export default topMusic
-
 export async function getStaticProps() {
 
   const options = {
@@ -86,4 +82,8 @@ export async function getStaticProps() {
         props: { data : data},
       }
     } 
+
+export default topMusic
+
+
 

@@ -40,25 +40,21 @@ function topMovies({data} : Props) {
       );
     };
 
+    export async function getStaticProps() {
+      const url =
+    "https://api.themoviedb.org/3/movie/top_rated?api_key=6d0fa2197867b2f5e0c1ed6a22813e94&language=en-US&page=1";
+    const response = await fetch(url);
+    const data = await response.json();
 
+      
+      return {
+        props: { data : data.results },
+      }
+    } 
 
 export default topMovies
 
-export async function getStaticProps() {
-  const url =
-"https://api.themoviedb.org/3/movie/top_rated?api_key=6d0fa2197867b2f5e0c1ed6a22813e94&language=en-US&page=1";
-const response = await fetch(url);
-const data = await response.json();
 
-
-
-
-  
-  
-  return {
-    props: { data : data.results },
-  }
-} 
 
 /*   export async function getStaticProps() {
 
