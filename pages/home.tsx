@@ -27,7 +27,28 @@ function home({}: Props) {
               </div>
               
               <div className="flex justify-center">
-                <h2 className="text-white text-xl font-oswald">An API implementation {text}</h2>
+
+              <div>
+
+      
+        <a
+          href=""
+          className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
+        >
+     
+
+          
+
+          <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
+            <h5 className="text-xl  truncate font-oswald">Testets</h5>
+            <h2 className="text-white text-xl font-oswald">An API implementation {text}</h2>
+            <p className="text-xs text-gray-300 truncate"></p>
+          </div>
+        </a>
+      
+      
+    </div>
+                
               </div>
           
               
