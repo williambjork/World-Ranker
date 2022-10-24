@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Card from "./Card"
-import OpenCard from "./OpenCard";
+
 
 
 
 
 function CardList({games, movies}) {
 
-  const [isOpen, setIsOpen] = useState(false);
+ 
 
 
 
@@ -39,7 +39,7 @@ function CardList({games, movies}) {
                 delay: i * 0.1
               }}
                 >
-                  {!isOpen && (
+                  
                 <Card
                   metacritic={game.metacritic}
                   key={game.id}
@@ -48,19 +48,14 @@ function CardList({games, movies}) {
                   image={game?.background_image}
                   layout="card"
                   
-                /> )}
+                /> 
                
               </motion.div>  
             ))} 
 
       
 
-        {isOpen && ( <OpenCard layoutId="card"
-                                metacritic={game.metacritic}
-                                key={game.id}
-                                maintitle={game.name}
-                                subtitle={game.released}
-                                image={game?.background_image}/> )}
+       
           </div>
         
       

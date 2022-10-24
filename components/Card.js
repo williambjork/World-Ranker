@@ -26,7 +26,7 @@ function Card({ maintitle, subtitle, metacritic, image }) {
     <motion.div
       
       transition={{ duration: 0.2}}
-      onClick={() => (setIsOpen(!isOpen))}
+      onClick={(e) => {e.preventDefault(); setIsOpen(!isOpen)}}
       whileHover={{ scale: 1.06 }}
       onHoverStart={(e) => {}}
       onHoverEnd={(e) => {}}
