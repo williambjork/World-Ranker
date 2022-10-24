@@ -7,15 +7,15 @@ function Card({ maintitle, subtitle, metacritic, image }) {
   const [isOpen, setIsOpen] = useState(false);
   const [metaColor, setMetaColor] = useState(null);
 
-  {
-    /* useEffect(() => {
+  
+     useEffect(() => {
     if(metacritic >= 85) {
       setMetaColor("green-400")
     } else {
       setMetaColor("white")
     }
-  }, [metacritic]); */
-  }
+  }, [metacritic]);
+  
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -63,7 +63,7 @@ function Card({ maintitle, subtitle, metacritic, image }) {
 
             {isOpen && ( 
             <div>
-             <p>some other content</p>
+             <p className="font-sm">Metacritic: {metacritic}</p>
             </div>
             )}
 
