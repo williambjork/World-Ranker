@@ -7,11 +7,20 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import globeblack from "../src/images/WorldRanker2-white.png";
 
+<<<<<<< HEAD
 const Home: NextPage = ({ games }) => {
   const router = useRouter();
 
   console.log(games);
 
+=======
+
+const Home: NextPage = () => {
+  const router = useRouter();
+
+  
+
+>>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
   return (
     <div>
       <Head>
@@ -19,22 +28,36 @@ const Home: NextPage = ({ games }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+<<<<<<< HEAD
       <main className="bgmeshdark flex">
+=======
+      <main className="bgmeshdark flex ">
+>>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
         
        
 
         <div className=" pb-5 flex flex-col justify-center items-center h-screen w-screen  scrollbar-hide">
           
+<<<<<<< HEAD
         <Image src={globeblack}  priority="true"  height={400} width={840} />
           
         <button className="text-white font-oswald hover:underline  pt-9"
                 onClick={() => {router.push("/home")}}>Enter</button>
+=======
+        <Image src={globeblack}  priority={true}  height={400} width={840} />
+          
+        <button className="text-white font-oswald hover:underline  pt-9"
+                onClick={() => {router.push("/home")}}>Enter</button>
+
+                
+>>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
           
         </div>
       </main>
     </div>
   );
 };
+<<<<<<< HEAD
 
 export async function getStaticProps() {
   const url =
@@ -47,4 +70,8 @@ export async function getStaticProps() {
   };
 }
 
+=======
+
+
+>>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
 export default Home;

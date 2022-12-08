@@ -16,6 +16,10 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-promise-tracker": "^2.1.0",
+<<<<<<< HEAD
+=======
+    "react-simple-typewriter": "^4.0.5",
+>>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
     "tailwind-scrollbar-hide": "^1.1.7",
     "tslib": "^2.4.0"
   },
