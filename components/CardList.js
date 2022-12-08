@@ -6,14 +6,14 @@ function CardList({games}) {
 =======
 import { useState } from "react";
 import Card from "./Card"
-import OpenCard from "./OpenCard";
+
 
 
 
 
 function CardList({games, movies}) {
 
-  const [isOpen, setIsOpen] = useState(false);
+ 
 
 
 
@@ -52,9 +52,13 @@ function CardList({games, movies}) {
               }}
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   {!isOpen && (
 >>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
+=======
+                  
+>>>>>>> 93a75505a812ae102e516e4e95bc35fc927e0e6f
                 <Card
                   metacritic={game.metacritic}
                   key={game.id}
@@ -74,13 +78,14 @@ function CardList({games, movies}) {
 =======
                   layout="card"
                   
-                /> )}
+                /> 
                
               </motion.div>  
             ))} 
 
       
 
+<<<<<<< HEAD
         {isOpen && ( <OpenCard layoutId="card"
                                 metacritic={game.metacritic}
                                 key={game.id}
@@ -88,6 +93,9 @@ function CardList({games, movies}) {
                                 subtitle={game.released}
                                 image={game?.background_image}/> )}
 >>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
+=======
+       
+>>>>>>> 93a75505a812ae102e516e4e95bc35fc927e0e6f
           </div>
         
       

@@ -31,6 +31,7 @@ function Sidebar(props) {
         
        {/* <User /> */}
 
+<<<<<<< HEAD
         <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/home" title="Home"/>
 <<<<<<< HEAD
         <SidebarButton icon={<BookmarkIcon className="w-6 h-6"/>} url="/topGames" title="Top Games"/>
@@ -41,6 +42,12 @@ function Sidebar(props) {
         <SidebarButton icon={<FilmIcon className="w-6 h-6"/>} url="/topMovies" title="Movies"/> 
         <SidebarButton icon={<MusicalNoteIcon className="w-6 h-6" />} url="/topMusic" title="Music"/>
 >>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
+=======
+        <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="home" title="Home"/>
+        <SidebarButton icon={<PuzzlePieceIcon className="w-6 h-6"/>} url="topGames" title="Games"/>
+        <SidebarButton icon={<FilmIcon className="w-6 h-6"/>} url="topMovies" title="Movies"/> 
+        <SidebarButton icon={<MusicalNoteIcon className="w-6 h-6" />} url="topMusic" title="Music"/>
+>>>>>>> 93a75505a812ae102e516e4e95bc35fc927e0e6f
         <SidebarButton icon={<CakeIcon className="w-6 h-6"/>} title="Free Cake"/>         
 
             <div className="flex items-center space-x-3  text-gray-400 pl-2 pt-9">

@@ -17,14 +17,20 @@ function Card({ maintitle, subtitle, metacritic, image }) {
   const [isOpen, setIsOpen] = useState(false);
   const [metaColor, setMetaColor] = useState(null);
 
+<<<<<<< HEAD
   {
     /* useEffect(() => {
 >>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
+=======
+  
+     useEffect(() => {
+>>>>>>> 93a75505a812ae102e516e4e95bc35fc927e0e6f
     if(metacritic >= 85) {
       setMetaColor("green-400")
     } else {
       setMetaColor("white")
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [metacritic]);
 
@@ -44,6 +50,10 @@ function Card({ maintitle, subtitle, metacritic, image }) {
 =======
   }, [metacritic]); */
   }
+=======
+  }, [metacritic]);
+  
+>>>>>>> 93a75505a812ae102e516e4e95bc35fc927e0e6f
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -54,14 +64,14 @@ function Card({ maintitle, subtitle, metacritic, image }) {
     <motion.div
       
       transition={{ duration: 0.2}}
-      onClick={() => (modalOpen ? close() : open())}
+      onClick={(e) => {e.preventDefault(); setIsOpen(!isOpen)}}
       whileHover={{ scale: 1.06 }}
       onHoverStart={(e) => {}}
       onHoverEnd={(e) => {}}
       
     >
 
-      {isOpen && ( <OpenCard layoutId="card"/> )}
+      
         <a
           href=""
           className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
@@ -103,9 +113,17 @@ function Card({ maintitle, subtitle, metacritic, image }) {
             <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
 
             <p className="text-xs text-gray-300 truncate">{subtitle}</p>
+
+            {isOpen && ( 
+            <div>
+             <p className="font-sm">Metacritic: {metacritic}</p>
+            </div>
+            )}
+
           </div>
         </a>
-      
+
+        
       
 >>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
     </motion.div>

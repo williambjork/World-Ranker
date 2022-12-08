@@ -8,6 +8,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.10",
     "color-convert": "^2.0.1",
+    "dominant-color": "^0.0.1",
     "framer-motion": "^7.3.6",
     "next": "latest",
     "next-auth": "^4.10.3",

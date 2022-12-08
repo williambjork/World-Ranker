@@ -15,6 +15,7 @@ function topGames({data, next} : Props) {
 
   const router = useRouter();
 
+  console.log(data)
     return (
         <div>
           <Head>
@@ -70,3 +71,4 @@ function topGames({data, next} : Props) {
       }
 
 export default topGames
+
