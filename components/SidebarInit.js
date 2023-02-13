@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { HomeIcon } from '@heroicons/react/24/solid'
-=======
 import { FilmIcon, HomeIcon, MusicalNoteIcon, PuzzlePieceIcon } from '@heroicons/react/24/solid'
->>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
 import { BookmarkIcon } from '@heroicons/react/24/solid'
 import { CloudIcon } from '@heroicons/react/24/solid'
 import { UserIcon } from '@heroicons/react/24/solid'
@@ -76,11 +72,7 @@ function SidebarInit(props) {
           delay: 0.1,
           ease: [0, 0.71, 0.2, 1.01]
         }}>
-<<<<<<< HEAD
-          <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/home" title="POOOOOO"/>
-=======
           <SidebarButton icon={<HomeIcon className="w-6 h-6"/>} url="/home" title="Home"/>
->>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
         </motion.div>
 
         <motion.div
@@ -99,11 +91,7 @@ function SidebarInit(props) {
           delay: 0.2,
           ease: [0, 0.71, 0.2, 1.01]
         }}>
-<<<<<<< HEAD
-          <SidebarButton icon={<BookmarkIcon className="w-6 h-6"/>} url="/topGames" title="Top Games"/>
-=======
           <SidebarButton icon={<PuzzlePieceIcon className="w-6 h-6"/>} url="/topGames" title="Games"/>
->>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
         </motion.div>
 
         <motion.div
@@ -122,11 +110,7 @@ function SidebarInit(props) {
           delay: 0.3,
           ease: [0, 0.71, 0.2, 1.01]
         }}>
-<<<<<<< HEAD
-          <SidebarButton icon={<CloudIcon className="w-6 h-6"/>} url="/worstGames" title="Shit Games"/> 
-=======
           <SidebarButton icon={<FilmIcon className="w-6 h-6"/>} url="/topMovies" title="Movies"/> 
->>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
         </motion.div>
 
         <motion.div
@@ -145,11 +129,7 @@ function SidebarInit(props) {
           delay: 0.4,
           ease: [0, 0.71, 0.2, 1.01]
         }}>
-<<<<<<< HEAD
-        <SidebarButton icon={<UserIcon className="w-6 h-6" />} title="Community"/>
-=======
         <SidebarButton icon={<MusicalNoteIcon className="w-6 h-6" />} url="/topMusic" title="Music"/>
->>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
         </motion.div>
         
         <motion.div

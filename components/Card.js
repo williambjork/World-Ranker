@@ -1,14 +1,4 @@
 import { useEffect, useState } from "react";
-<<<<<<< HEAD
-import Thumbnail from "./Thumbnail"
-import { motion } from "framer-motion"
-
-function Card({maintitle, subtitle, metacritic, image}) {
-
-  const [metaColor, setMetaColor] = useState(null)
-
-  useEffect(() => {
-=======
 import Thumbnail from "./Thumbnail";
 import { motion } from "framer-motion";
 import OpenCard from "./OpenCard";
@@ -17,21 +7,18 @@ function Card({ maintitle, subtitle, metacritic, image }) {
   const [isOpen, setIsOpen] = useState(false);
   const [metaColor, setMetaColor] = useState(null);
 
-<<<<<<< HEAD
+
   {
-    /* useEffect(() => {
->>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
-=======
+    /* 
   
      useEffect(() => {
->>>>>>> 93a75505a812ae102e516e4e95bc35fc927e0e6f
+
     if(metacritic >= 85) {
       setMetaColor("green-400")
     } else {
       setMetaColor("white")
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   }, [metacritic]);
 
   
@@ -47,13 +34,12 @@ function Card({ maintitle, subtitle, metacritic, image }) {
         
       >
         {/*
-=======
+
   }, [metacritic]); */
   }
-=======
-  }, [metacritic]);
+
   
->>>>>>> 93a75505a812ae102e516e4e95bc35fc927e0e6f
+  
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -77,7 +63,7 @@ function Card({ maintitle, subtitle, metacritic, image }) {
           className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
         >
           {/*
->>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
+
         <span className={`absolute z-10 inline-flex items-center px-3 py-1 text-xs font-semibold text-white bg-black rounded-full  right-4 top-4`}>
           {metacritic}
           <svg
@@ -91,20 +77,6 @@ function Card({ maintitle, subtitle, metacritic, image }) {
         </span>
   */}
 
-<<<<<<< HEAD
-        <div>
-        <Thumbnail  image={image} />
-        
-        </div>
-       
-        <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
-        
-        <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
-
-          <p className="text-xs text-gray-300 truncate">{subtitle}</p>
-        </div>
-      </a>
-=======
           <div>
             <Thumbnail image={image} />
           </div>
@@ -125,7 +97,6 @@ function Card({ maintitle, subtitle, metacritic, image }) {
 
         
       
->>>>>>> 02686284714b3a96867d6f551a99339c0c64f342
     </motion.div>
   );
 }
