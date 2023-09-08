@@ -26,31 +26,34 @@ const dropIn = {
 function OpenCard({maintitle, subtitle, metacritic, image, handleClose}) {
   return (
     
-        <Backdrop onClick={handleClose}>
-            <motion.div
-                onClick={(e) => e.stopPropagation()}  
-                className="margin-auto flex flex-col items-center w-screen h-screen"
-                variants={dropIn}
-                initial="hidden"
-                animate="visible"
-                exit="exit">
+    <motion.div
+    transition={{ duration: 0.2 }}
+    onClick={(e) => {
+      e.preventDefault();
+      setIsOpen(!isOpen);
+    }}
+   
+  >
+    <a
+      href=""
+      className="border-b-2  border-gray-600  absolute inset-0 flex justify-center items-center overflow-hidden bg-center rounded-xl "
+      style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+    >
+      <div>
+        <Thumbnail image={image} width={800} height={1000} objectFit="contain" />
+      </div>
 
-                    <h2>{maintitle}</h2>
-                    <div>
-            <Thumbnail image={image} />
-          </div>
+      <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
+        <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
 
-          <div className="relative  p-3 text-white bg-gray-600 bg-opacity-30">
-            <h5 className="text-xl  truncate font-oswald">{maintitle}</h5>
+        <p className="text-xs text-gray-300 truncate">{subtitle}</p>
 
-            <p className="text-xs text-gray-300 truncate">{subtitle}</p>
-          </div>
-        
-                    <button onClick={handleClose}>Cose</button>
-
-            </motion.div>
-
-        </Backdrop>
+        <div>
+          <p className="font-sm">Metacritic: {metacritic}</p>
+        </div>
+      </div>
+    </a>
+  </motion.div>
    
         
       
