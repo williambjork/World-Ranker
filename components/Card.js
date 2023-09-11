@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import Thumbnail from "./Thumbnail";
 import { motion } from "framer-motion";
 import OpenCard from "./OpenCard";
+import ReactCardFlip from 'react-card-flip';
+import ScreenShot from "./ScreenShot"
 
-function Card({ maintitle, subtitle, metacritic, image }) {
-  const [isOpen, setIsOpen] = useState(false);
+function Card({ maintitle, subtitle, metacritic, image, screenshot }) {
+  const [isFlipped, setIsFlipped] = useState(false);
   const [metaColor, setMetaColor] = useState(null);
 
   useEffect(() => {
@@ -17,30 +19,29 @@ function Card({ maintitle, subtitle, metacritic, image }) {
 
   const handleClick = (e) => {
     e.preventDefault();
-    setIsOpen(!isOpen);
+    setisFLipped(!isFlipped);
   };
 
   return (
     <>
-      {isOpen ? (
-        <OpenCard maintitle={maintitle} subtitle={subtitle} metacritic={metacritic} image={image} />
+     
         
-      ) : (
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <motion.div
           transition={{ duration: 0.2 }}
           onClick={(e) => {
             e.preventDefault();
-            setIsOpen(!isOpen);
+            setIsFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
           }}
-          whileHover={{ scale: 1.06 }}
+         
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
         >
           <a
             href=""
-            className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl "
+            className="border-b-2  border-gray-600 relative block overflow-hidden bg-center rounded-xl hover:scale-105"
           >
-            <div>
+            <div >
               <Thumbnail image={image} />
             </div>
 
@@ -49,15 +50,44 @@ function Card({ maintitle, subtitle, metacritic, image }) {
 
               <p className="text-xs text-gray-300 truncate">{subtitle}</p>
 
-              {isOpen && (
-                <div>
-                  <p className="font-sm">Metacritic: {metacritic}</p>
-                </div>
-              )}
+              
+                
             </div>
           </a>
         </motion.div>
-      )}
+
+        <motion.div
+          transition={{ duration: 0.2 }}
+          onClick={(e) => {
+            e.preventDefault();
+            setIsFlipped(!isFlipped);
+          }}
+          
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+        >
+          <a
+            href=""
+            className="border-b-2  border-gray-600 bg-gray-600 bg-opacity-30 relative block overflow-hidden bg-center rounded-xl hover:scale-105"
+          >
+            <div className="">
+              <ScreenShot screenshot={screenshot} />
+            </div>
+
+            <div className="relative -mt-10  p-3 text-white ">
+              <h5 className="text-md mb-3  truncate font-oswald">{maintitle}</h5>
+
+              <p className="text-xs text-gray-300 truncate">{subtitle}</p>
+
+              
+                <div>
+                  <p className="text-xs mb-4 text-gray-300">Metacritic: {metacritic}</p>
+                </div>
+            
+            </div>
+          </a>
+        </motion.div>
+        </ReactCardFlip>
     </>
   );
 }

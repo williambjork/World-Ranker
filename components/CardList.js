@@ -30,6 +30,7 @@ function CardList({ games, movies, isOpen }) {
               maintitle={game.name}
               subtitle={game.released}
               image={game?.background_image}
+              screenshot={game?.short_screenshots[1].image}
             />
           )}
         </motion.div>

@@ -28,16 +28,10 @@ function OpenCard({maintitle, subtitle, metacritic, image, handleClose}) {
     
     <motion.div
     transition={{ duration: 0.2 }}
-    onClick={(e) => {
-      e.preventDefault();
-      setIsOpen(!isOpen);
-    }}
-   
   >
     <a
       href=""
-      className="border-b-2  border-gray-600  absolute inset-0 flex justify-center items-center overflow-hidden bg-center rounded-xl "
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+      className="border-b-2  border-gray-600  absolute inset-0 flex justify-center items-center overflow-hidden bg-center rounded-xl"
     >
       <div>
         <Thumbnail image={image} width={800} height={1000} objectFit="contain" />
